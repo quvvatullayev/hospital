@@ -4,8 +4,8 @@ from .views.commit import CommintListCreateView, CommintRetrieveUpdateDestroyVie
 
 urlpatterns = [
     # Doctor viwes
-    path('doctor/list/', DoctorListCreateView.as_view()),
-    path('doctor/detil/', DoctorRetrieveUpdateDestroyView.as_view()),
+    path('list/', DoctorListCreateView.as_view()),
+    path('detil/', DoctorRetrieveUpdateDestroyView.as_view()),
 
     # Commint views
     path('commint/list/', CommintListCreateView.as_view()),
