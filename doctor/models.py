@@ -2,6 +2,11 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser
 from customer.models import Customer
 
+class Category(models.Model):
+    title = models.CharField(max_length=30)
+    description = models.TextField()
+    img = models.ImageField(upload_to='./category_img')
+
 class Doctor(AbstractBaseUser):
     name = models.CharField(max_length=20)
     first_name = models.CharField(max_length=20)
