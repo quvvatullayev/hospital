@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # global app
     "rest_framework",
+    "drf_yasg",
 
     # local app
     'customer',
