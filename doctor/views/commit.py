@@ -6,4 +6,8 @@ from ..serializers import Commint, CommintSerializers
 class CommintListCreateView(generics.ListCreateAPIView):
     queryset = Commint.objects.all()
     serializer_class = CommintSerializers
-    
+
+class CommitRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Commint.objects.all()
+    serializer_class = CommintSerializers
+
