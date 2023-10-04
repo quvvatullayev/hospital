@@ -7,7 +7,7 @@ class CommintListCreateView(generics.ListCreateAPIView):
     queryset = Commint.objects.all()
     serializer_class = CommintSerializers
 
-class CommitRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+class CommintRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Commint.objects.all()
     serializer_class = CommintSerializers
 
