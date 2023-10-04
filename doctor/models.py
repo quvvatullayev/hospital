@@ -7,6 +7,9 @@ class Category(models.Model):
     description = models.TextField()
     img = models.ImageField(upload_to='./category_img')
 
+    def __str__(self) -> str:
+        return self.title
+
 class Doctor(AbstractBaseUser):
     name = models.CharField(max_length=20)
     first_name = models.CharField(max_length=20)
@@ -22,3 +25,6 @@ class Commint(models.Model):
     doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE)
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
     description = models.TextField()
+
+    def __str__(self) -> str:
+        return self.customer.name
