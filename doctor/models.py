@@ -10,15 +10,18 @@ class Category(models.Model):
         return self.title
 
 class DoctorModel(AbstractBaseUser):
-    name = models.CharField(max_length=20)
+    username = models.CharField(max_length=20, unique=True)  # USERNAME_FIELD ni qo'shing
     first_name = models.CharField(max_length=20)
     description = models.TextField()
     phone = models.CharField(max_length=30)
     job_time_start = models.TimeField()
     job_time_finish = models.TimeField()
     
+    # USERNAME_FIELD ni sozlang
+    USERNAME_FIELD = 'username'
+    
     def __str__(self):
-        return self.name
+        return self.username
     
 class Comment(models.Model):
     doctor = models.ForeignKey('DoctorModel', on_delete=models.CASCADE)
