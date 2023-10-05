@@ -29,4 +29,4 @@ class Comment(models.Model):
     description = models.TextField()
 
     def __str__(self):
-        return self.customer.name
+        return self.customer.username
