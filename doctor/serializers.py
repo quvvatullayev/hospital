@@ -1,9 +1,9 @@
 from rest_framework import serializers
-from .models import Doctor, Category, Commint
+from .models import DoctorModel, Category, Comment
 
 class DoctorSerializers(serializers.ModelSerializer):
     class Meta:
-        model = Doctor
+        model = DoctorModel
         fields = '__all__'
 
 class CategorySerializers(serializers.ModelSerializer):
@@ -13,5 +13,5 @@ class CategorySerializers(serializers.ModelSerializer):
 
 class CommintSerializers(serializers.ModelSerializer):
     class Meta:
-        model = Commint
+        model = Comment
         fields = '__all__'
