@@ -7,4 +7,7 @@ from ..serializers import CustomerModelSerializer
 class CustomerListCreateView(generics.ListCreateAPIView):
     queryset = CustomerModel.objects.all()
     serializer_class = CustomerModelSerializer
-    
+
+class CustomerRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = CustomerModel.objects.all()
+    serializer_class = CustomerModelSerializer
